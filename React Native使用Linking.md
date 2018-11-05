@@ -153,8 +153,6 @@ openLka(){
 
 ![img](https://ws2.sinaimg.cn/large/006tNbRwly1fww65zznjkj309y05oq2x.jpg)
 
-image.png
-
 先别急着高兴，我们把lka和lkb都关掉，重新打开lka，你将得到“didmount:null”的结果。这是当然的，因为你是自己打开的嘛。
 
 然后，我们通过lka唤起lkb，再通过lkb唤起lka，你得到的结果如下：
@@ -162,8 +160,6 @@ image.png
 
 
 ![img](https://ws3.sinaimg.cn/large/006tNbRwly1fww664oqijj309y05jq2t.jpg)
-
-image.png
 
 发现问题没有？你可以多尝试几次，最终会发现一个规律：`AppState.addEventListener`里面获取的url的值永远与`componentDidMount`里直接获取的url的值相同。只要首次获取的是null，那么以后永远都是null；只要首次获取的是有值的，那么以后永远都是有值的。
 
@@ -214,8 +210,6 @@ public void onNewIntent(Intent intent){
 
 
 ![img](https://ws4.sinaimg.cn/large/006tNbRwly1fww66dkmlwj30a305dq2x.jpg)
-
-image.png
 
 结果与我们的预期相符。
 
