@@ -32,4 +32,5 @@ tags:react native
 
 `我试过不起作用`[传送门](https://github.com/facebook/react-native/issues/21150)
 
-![image-20181107105434882](/Users/liuxin/Library/Application Support/typora-user-images/image-20181107105434882.png)
+
+![image-20181107105434882](https://ws3.sinaimg.cn/large/006tNbRwly1fwzb9tvccrj30lj05z3yv.jpg)
