@@ -4,7 +4,11 @@ source_title:React Native之prop-types进行属性确认
 source_url:https://blog.csdn.net/xiangzhihong8/article/details/78836136
 ```
 
-React Native已经升级到0.51.0了，版本升级很快，但是对老项目也会有一些问题，常见的就是属性找不到的问题。例如： 
+React Native已经升级到0.51.0了，版本升级很快，但是对老项目也会有一些问题，常见的就是属性找不到的问题。
+
+<!--more-->
+
+例如： 
 
 ![img](https://ws4.sinaimg.cn/large/006tNbRwly1fwza2sv3oij30cf0lkwhz.jpg)
 
