@@ -2,13 +2,14 @@
 tags:postgress
 ```
 
+postgresql数据库的备份和还原命令pg_dump <!--mor-->
 
-
-postgresql数据库的备份和还原命令pg_dump 
 常用命令：
 
 #### 备份：
-```pg_dump -U postgres -d myDBname -f dump.sql```
+```
+pg_dump -U postgres -d myDBname -f dump.sql
+```
 
 ##### 其中
 ```
