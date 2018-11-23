@@ -113,3 +113,54 @@ task wrapper(type: Wrapper) {
 
 ```
 
+
+
+#### Android dependency 'com.android.support:support-support-v4' has different version for the compile (25.2.0) and runtime (26.0.0-beta2) classpath. You should manually set the same version via DependencyResolution.
+
+##### 解决办法[链接](https://github.com/flutter/flutter/issues/14020)
+
+```
+buildscript {
+    
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.1.1'
+        
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+subprojects {
+    project.configurations.all {
+        resolutionStrategy.eachDependency { details ->
+            if (details.requested.group == 'com.android.support'
+                    && !details.requested.name.contains('multidex') ) {
+                details.useVersion "26.1.0"
+            }
+        }
+    }
+}
+```
+
+![image-20181122144713265](https://ws4.sinaimg.cn/large/006tNbRwly1fxgu91b8g7j30lv0m60u4.jpg)
+
+#### com.android.builder.dexing.DexArchiveBuilderException in android with mvstore 
+
+##### [链接](https://github.com/h2database/h2database/issues/1090)
+
+![image-20181122144824289](https://ws4.sinaimg.cn/large/006tNbRwly1fxgua7oovjj30lx0700td.jpg)
