@@ -22,6 +22,9 @@ Android 平台提供了一种框架 API，应用可利用它与底层 Android �
 Android 平台提供的框架 API 使用叫做“API 级别”的整数标识符指定。 每个 Android 平台版本恰好支持一个 API 级别，但隐含了对所有早期 API 级别（低至 API 级别 1）的支持。 Android 平台初始版本提供的是 API 级别 1，后续版本的 API 级别递增。
 
 下表列出了各 Android 平台版本支持的 API 级别。
+
+
+
 | 平台版本                  | API 级别 | VERSION_CODE           |
 | ------------------------- | -------- | ---------------------- |
 | Android 8.1               | 27       | Oreo                   |
