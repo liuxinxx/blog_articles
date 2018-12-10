@@ -10,6 +10,8 @@ source_url:https://www.jianshu.com/p/37428d579cf6
 
 如果在使用过程中遇到什么问题，可以加入`react-native兴趣交流群`群号：`397885169`一起讨论学习，也欢迎在评论区评论。
 
+<!--more-->
+
 ####  [RN项目模板，还未完成，但react-native-router-flux的Demo在里面](https://link.jianshu.com?t=https%3A%2F%2Fgithub.com%2FSurpassRabbit%2Freact-native-template)
 
 #### 本文会持续更新，只要该库作者不停止更新，那么我也不会停下脚步。
