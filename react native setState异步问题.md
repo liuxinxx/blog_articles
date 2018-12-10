@@ -2,12 +2,6 @@
 tags:renct native
 ---
 
-|wer|wer|wer|
-|---|---|---|
-|wer|wer|werwer|
-
-
-
 总会遇到给state设置值后，马上就会用到state里面的值的情况
  但是setState是异步的，就会导致用的时候还没有被set成功
 
