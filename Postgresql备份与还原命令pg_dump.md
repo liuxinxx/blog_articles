@@ -2,7 +2,7 @@
 tags:postgress
 ```
 
-postgresql数据库的备份和还原命令pg_dump <!--mor-->
+postgresql数据库的备份和还原命令pg_dump <!--more-->
 
 常用命令：
 
