@@ -8,7 +8,7 @@ source_title:pgcli
 
 ## A REPL for Postgres
 
-This is a postgres client that does auto-completion and syntax highlighting.
+This is a postgres client that does auto-completion and syntax highlighting.<!--more-->
 
 Home Page: [http://pgcli.com](http://pgcli.com/)
 
