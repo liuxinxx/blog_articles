@@ -5,6 +5,9 @@ source_title:Xpath string()提取多个子节点中的文本
 ```
 
 Xpath string()提取多个子节点中的文本
+
+<!--more-->
+
 ```
 <div>
     <ul class="show">
