@@ -113,7 +113,8 @@ oracle hard nproc 16384
 oracle soft nofile 1024
 oracle hard nofile 65536
 ```
-###修改环境变量文件
+### 修改环境变量文件
+
 * 使用vi编辑器对/etc/profile文件进行编辑：
 ```
 vi /etc/profile
