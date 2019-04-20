@@ -1,3 +1,9 @@
+```
+tags:java
+```
+
+
+
 使用Java时会接触到不同的版本。大多数时候我在使用Java 8，但是因为某些框架或是工具的要求，这时不得不让Java 6上前线。<!--more-->一般情况下是配置JAVA_HOME，指定不同的Java版本，但是这需要人为手动的输入。如果又要选择其他版本，就需要对JAVA_HOME重新进行设置。这十分麻烦，所以在做这些操作时真是“会呼吸的痛”。终于，我发现了[jEnv](http://www.jenv.be/)。
 
 正如它的官网所宣称的那样，它是来让你忘记怎么配置JAVA_HOME环境变量的神队友。使用简单的命令就可以在不同的Java版本之间进行切换。如果你使用过rbenv，你会发现jEnv就如同[rbenv](https://github.com/sstephenson/rbenv)的Java版一样。
