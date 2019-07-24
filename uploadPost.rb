@@ -52,11 +52,7 @@ data = {
   'source_url' =>  temp_data.key?("source_url") ? temp_data["source_url"].sub(":","") : "",
   'api_key' =>  key,
 }
-header = {
-  "Content-Type": "application/json;charset=UTF-8",
-  # "Content-Type": "application/x-www-form-urlencoded"
-}
-
+header = {"Content-Type": "application/json;charset=UTF-8"}
 http = Net::HTTP.new(url.host, url.port)
 request_method = 'POST'
 p JSON.parse http.send_request(request_method,"/api/v1/articles",JSON.dump(data),header).body
