@@ -1,3 +1,7 @@
+```
+tags:mysql
+```
+
 * 检查“数据库日志”是否开启：
   ```sql
   SHOW VARIABLES LIKE 'general%';
