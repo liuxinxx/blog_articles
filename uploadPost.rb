@@ -58,7 +58,7 @@ header = {
 
 http = Net::HTTP.new(url.host, url.port)
 request_method = 'POST'
-pp JSON.parse http.send_request(request_method,"/api/v1/articles",JSON.dump(data),header).body
+pp JSON.parse http.send_request(request_method,"/api/v1/admin/articles",JSON.dump(data),header).body
 
 puts `git status`
 
