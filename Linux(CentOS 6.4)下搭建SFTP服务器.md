@@ -1,4 +1,9 @@
-### 1、查看openssh的版本
+```
+tags:sftp
+```
+
+### 1、查看openssh的版本 
+<!--more-->
 
 ```
 ssh -v
