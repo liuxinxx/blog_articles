@@ -9,11 +9,11 @@ temp_data = {}
 content = ''
 flag = false
 i = 0
-key = ''
-lines = File.open("./key.config").readlines
-lines.each do |line|
-  key = line.gsub(/\n/,"")
-end
+# key = ''
+# lines = File.open("./key.config").readlines
+# lines.each do |line|
+#   key = line.gsub(/\n/,"")
+# end
 
 lines = File.open("./#{ARGV[0]}").readlines
 lines.each do |line|
@@ -43,26 +43,27 @@ end
 puts '================'
 p temp_data
 puts '================'
-url =URI.parse "http://liuxin.im"
+# url =URI.parse "http://liuxin.im"
+url = URI.parse "http://localhost:3000/"
 data = {
   'tags' =>  temp_data["tags"],
   'title' =>  ARGV[0].gsub("\"","").gsub(".md",""),
   'content' =>  content,
   'source_title' =>  temp_data.key?("source_title") ? temp_data["source_title"].sub(":","") : "liuxin's blog",
   'source_url' =>  temp_data.key?("source_url") ? temp_data["source_url"].sub(":","") : "",
-  'api_key' =>  key,
+  'api_key' =>  "0x048115d2ac32144cfb10c46f6f5a786690ff5485",
 }
 header = {"Content-Type": "application/json;charset=UTF-8"}
 http = Net::HTTP.new(url.host, url.port)
 request_method = 'POST'
-p JSON.parse http.send_request(request_method,"/api/v1/articles",JSON.dump(data),header).body
+p JSON.parse http.send_request(request_method,"/api/v1/admin/articles",JSON.dump(data),header).body
 
-puts `git status`
+# puts `git status`
 
-puts `git add "#{ARGV[0]}"`
+# puts `git add "#{ARGV[0]}"`
 
-puts `git commit -m "#{ARGV[0]}"`
+# puts `git commit -m "#{ARGV[0]}"`
 
-puts `git push origin master`
+# puts `git push origin master`
 
-puts 'success!'
+# puts 'success!'

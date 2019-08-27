@@ -1,3 +1,6 @@
+```
+tags:mysql
+```
 行锁变表锁，是福还是坑？如果你不清楚MySQL加锁的原理，你会被它整的很惨！不知坑在何方？没事，我来给你们标记几个坑。遇到了可别乱踩。<!--more-->
 
 通过本章内容，带你学习MySQL的行锁，表锁，两种锁的优缺点，行锁变表锁的原因，以及开发中需要注意的事项。还在等啥？经验等你来拿！
@@ -144,7 +147,7 @@ Query OK, 1 row affected (18.99 sec)
 ### 排他锁
 
 排他锁，也称写锁，独占锁，当前写操作没有完成前，它会阻断其他写锁和读锁。
-![排他锁](http://images2017.cnblogs.com/blog/806956/201801/806956-20180108223455238-1630428254.png)
+![排他锁](http://ww1.sinaimg.cn/large/006tNc79gy1g5b5281zugj30hi0e9gm5.jpg)
 
 ```
 # Transaction_A
@@ -176,7 +179,7 @@ mysql> select * from innodb_lock where id=4 for update;
 ### 共享锁
 
 共享锁，也称读锁，多用于判断数据是否存在，多个读操作可以同时进行而不会互相影响。当如果事务对读锁进行修改操作，很可能会造成死锁。如下图所示。
-![共享锁](http://images2017.cnblogs.com/blog/806956/201801/806956-20180108222644301-1772818432.png)
+![共享锁](http://ww1.sinaimg.cn/large/006tNc79gy1g5b52coyztj30hh0cxgm4.jpg)
 
 ```
 # Transaction_A
@@ -248,7 +251,7 @@ innodb_row_lock_waits: 系统启动后到现在总共等待的次数；非常重
 ### 共享读锁
 
 对MyISAM表的读操作（加读锁），不会阻塞其他进程对同一表的读操作，但会阻塞对同一表的写操作。只有当读锁释放后，才能执行其他进程的写操作。在锁释放前不能取其他表。
-![读锁](http://images2017.cnblogs.com/blog/806956/201801/806956-20180109110055769-1244049794.png)
+![读锁](http://ww2.sinaimg.cn/large/006tNc79gy1g5b52gtoxdj30hx0ctgm5.jpg)
 
 ```
 Transaction-A
@@ -280,7 +283,7 @@ Query OK, 1 row affected (18.67 sec)
 ### 独占写锁
 
 对MyISAM表的写操作（加写锁），会阻塞其他进程对同一表的读和写操作，只有当写锁释放后，才会执行其他进程的读写操作。在锁释放前不能写其他表。
-![写锁](http://images2017.cnblogs.com/blog/806956/201801/806956-20180109111140472-1348610312.png)
+![写锁](http://ww4.sinaimg.cn/large/006tNc79gy1g5b52jy94rj30ia07xt8v.jpg)
 
 ```
 Transaction-A

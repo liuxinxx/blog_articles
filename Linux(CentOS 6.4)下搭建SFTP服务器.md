@@ -2,8 +2,12 @@
 tags:sftp
 ```
 
+<<<<<<< HEAD
 ### 1、查看openssh的版本 
 <!--more-->
+=======
+### 1、查看openssh的版本
+>>>>>>> 06a2ab80784310403dd6cd650c75cb2b89bbbf29
 
 ```
 ssh -v
